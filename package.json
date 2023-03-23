@@ -17,6 +17,7 @@
     "@nrwl/react": "15.8.7",
     "@nrwl/vite": "15.8.7",
     "@nrwl/workspace": "15.8.7",
+    "@nx-extend/strapi": "^3.4.0",
     "@testing-library/react": "14.0.0",
     "@types/node": "18.14.2",
     "@types/react": "18.0.28",
