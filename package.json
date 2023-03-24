@@ -6,7 +6,10 @@
     "start:frontend": "nx serve frontend",
     "test:unit": "nx test frontend",
     "test:e2e": "nx e2e frontend-e2e",
-    "start:backend": "nx serve backend"
+    "start:backend": "nx serve backend",
+    "lint:check": "nx run-many --all --target=lint --parallel",
+    "lint:fix": "nx run-many --all --target=lint --fix --parallel",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +43,7 @@
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^8.0.3",
     "jsdom": "~20.0.3",
     "nx": "15.8.7",
     "prettier": "^2.6.2",
