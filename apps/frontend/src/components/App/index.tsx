@@ -1,10 +1,13 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'normalize.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Home from '../Home';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>hello</div>,
+    element: <Home />,
   },
 ]);
 
