@@ -8,6 +8,8 @@ Project uses:
 
 ## Development server
 
+Create .env files in backend and frontend directories using data from .env.example files.
+
 Run `npm start` for a dev server
 
 Navigate to http://localhost:4200/ to open blog
