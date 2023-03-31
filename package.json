@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "start": "nx run-many --parallel --target=serve --projects=frontend,backend",
     "start:frontend": "nx serve frontend",
     "test:unit": "nx test frontend",
     "test:e2e": "nx e2e frontend-e2e",
