@@ -1,11 +1,12 @@
-import React from 'react';
+import { PropsWithChildren } from 'react';
+import classNames from 'classnames';
 
-type ContainerProps = {
-  children: React.ReactNode;
-};
+interface ContainerProps {
+  className?: string;
+}
 
-function Container({ children }: ContainerProps) {
-  return <div className="container">{children}</div>;
+function Container({ className, children }: PropsWithChildren<ContainerProps>) {
+  return <div className={classNames('container', className)}>{children}</div>;
 }
 
 export default Container;
