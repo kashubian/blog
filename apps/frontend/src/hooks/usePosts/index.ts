@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { API_URL } from '../constants';
-import Post from '../types/post';
+import { API_URL } from '../../constants';
+import Post from '../../types/post';
 
 export const usePosts = (queryParams: string) => {
   let apiUrl = `${API_URL}/api/posts`;
