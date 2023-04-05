@@ -4,6 +4,13 @@ type Post = {
     title: string;
     description: string;
     publishedAt: string;
+    photo: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
   };
 };
 

@@ -1,9 +1,10 @@
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 import Container from '../common/Container';
 import { usePosts } from '../../hooks/usePosts';
+import { API_URL } from '../../constants';
 
 function Home() {
-  const { data } = usePosts('sort=publishedAt:DESC');
+  const { data } = usePosts('sort=publishedAt:DESC&populate=photo');
   useDocumentTitle('Blog');
 
   return (
@@ -23,7 +24,12 @@ function Home() {
                     {attributes.description.length >= 300 && '...'}
                   </p>
                 </div>
-                <div className="col-3">TODO add image</div>
+                <div className="col-3">
+                  <img
+                    src={API_URL + attributes.photo?.data?.attributes?.url}
+                    alt=""
+                  />
+                </div>
               </div>
             </article>
           );
