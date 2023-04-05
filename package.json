@@ -8,7 +8,6 @@
     "test:unit": "nx test frontend",
     "test:e2e": "nx e2e frontend-e2e",
     "start:backend": "nx serve backend",
-    "lint:check": "nx run-many --all --target=lint --parallel",
     "lint:fix": "nx run-many --all --target=lint --fix --parallel",
     "prepare": "husky install"
   },
