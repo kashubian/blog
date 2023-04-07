@@ -5,6 +5,8 @@ import Container from '../common/Container';
 import { usePosts } from '../../hooks/usePosts';
 import { API_URL } from '../../constants';
 
+import styles from './Home.module.scss';
+
 function Home() {
   const { data } = usePosts('sort=publishedAt:DESC&populate=photo');
   useDocumentTitle('Blog');
@@ -14,7 +16,7 @@ function Home() {
       {data &&
         data.map(({ id, attributes }) => {
           return (
-            <article key={id}>
+            <article className={styles.article} key={id}>
               <div className="row">
                 <div className="col-9">
                   <time dateTime={attributes.publishedAt}>
