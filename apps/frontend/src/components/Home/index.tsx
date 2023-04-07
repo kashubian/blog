@@ -1,3 +1,5 @@
+import format from 'date-fns/format';
+
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 import Container from '../common/Container';
 import { usePosts } from '../../hooks/usePosts';
@@ -16,7 +18,7 @@ function Home() {
               <div className="row">
                 <div className="col-9">
                   <time dateTime={attributes.publishedAt}>
-                    {attributes.publishedAt}
+                    {format(new Date(attributes.publishedAt), 'PP')}
                   </time>
                   <h2>{attributes.title}</h2>
                   <p>
