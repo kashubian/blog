@@ -19,10 +19,13 @@ function Home() {
             <article className={styles.article} key={id}>
               <div className="row">
                 <div className="col-9">
-                  <time dateTime={attributes.publishedAt}>
+                  <time
+                    className={styles.publishedAt}
+                    dateTime={attributes.publishedAt}
+                  >
                     {format(new Date(attributes.publishedAt), 'PP')}
                   </time>
-                  <h2>{attributes.title}</h2>
+                  <h2 className={styles.heading}>{attributes.title}</h2>
                   <p>
                     {attributes.description.substring(0, 300)}
                     {attributes.description.length >= 300 && '...'}

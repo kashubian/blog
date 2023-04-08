@@ -8,3 +8,21 @@
     margin-bottom: 24px;
   }
 }
+
+.publishedAt {
+  color: $accent-color;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 16px;
+  color: $primary-color;
+  margin-bottom: 8px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+  }
+}
