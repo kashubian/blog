@@ -22,11 +22,21 @@
       "required": true
     },
     "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "estimatedReadingTime": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "label": {
+      "type": "string",
+      "required": true
     }
   }
 }

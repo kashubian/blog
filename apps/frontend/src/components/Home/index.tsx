@@ -1,4 +1,5 @@
 import format from 'date-fns/format';
+import { Link } from 'react-router-dom';
 
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 import Container from '../common/Container';
@@ -38,6 +39,18 @@ function Home() {
                       src={API_URL + attributes.photo?.data?.attributes?.url}
                       alt=""
                     />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col">
+                    <div className={styles.articleInfo}>
+                      <Link to="/" className={styles.label}>
+                        {attributes.label}
+                      </Link>
+                      <div className={styles.readingTime}>
+                        {attributes.estimatedReadingTime} min read
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
