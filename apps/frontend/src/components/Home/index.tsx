@@ -26,7 +26,7 @@ function Home() {
                     {format(new Date(attributes.publishedAt), 'PP')}
                   </time>
                   <h2 className={styles.heading}>{attributes.title}</h2>
-                  <p>
+                  <p className={styles.description}>
                     {attributes.description.substring(0, 300)}
                     {attributes.description.length >= 300 && '...'}
                   </p>

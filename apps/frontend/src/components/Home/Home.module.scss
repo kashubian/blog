@@ -26,3 +26,12 @@
     font-size: 22px;
   }
 }
+
+.description {
+  color: $primary-color;
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
