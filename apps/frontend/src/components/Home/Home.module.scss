@@ -3,6 +3,7 @@
 .article {
   margin-top: 24px;
   border-bottom: 1px solid rgba($color: $accent-color, $alpha: 0.2);
+  padding-bottom: 12px;
 
   &:last-child {
     margin-bottom: 24px;
@@ -33,5 +34,24 @@
 
   @media screen and (min-width: $tablet) {
     display: block;
+  }
+}
+
+.photo {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo__wrapper {
+  height: 80px;
+
+  @media screen and (min-width: $tablet) {
+    height: 112px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 140px;
   }
 }

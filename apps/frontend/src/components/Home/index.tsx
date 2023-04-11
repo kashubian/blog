@@ -18,7 +18,7 @@ function Home() {
           return (
             <article className={styles.article} key={id}>
               <div className="row">
-                <div className="col-9">
+                <div className="col-8">
                   <time
                     className={styles.publishedAt}
                     dateTime={attributes.publishedAt}
@@ -31,11 +31,14 @@ function Home() {
                     {attributes.description.length >= 300 && '...'}
                   </p>
                 </div>
-                <div className="col-3">
-                  <img
-                    src={API_URL + attributes.photo?.data?.attributes?.url}
-                    alt=""
-                  />
+                <div className="col-4">
+                  <div className={styles.photo}>
+                    <img
+                      className={styles.photo__wrapper}
+                      src={API_URL + attributes.photo?.data?.attributes?.url}
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </article>
