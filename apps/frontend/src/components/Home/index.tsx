@@ -36,7 +36,7 @@ function Home() {
                   <div className={styles.photo}>
                     <img
                       className={styles.photo__wrapper}
-                      src={API_URL + attributes.photo?.data?.attributes?.url}
+                      src={API_URL + attributes.photo.data.attributes.url}
                       alt=""
                     />
                   </div>
