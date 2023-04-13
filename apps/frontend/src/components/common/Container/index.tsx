@@ -6,7 +6,11 @@ interface ContainerProps {
 }
 
 function Container({ className, children }: PropsWithChildren<ContainerProps>) {
-  return <div className={classNames('container', className)}>{children}</div>;
+  return (
+    <div data-testid="container" className={classNames('container', className)}>
+      {children}
+    </div>
+  );
 }
 
 export default Container;
