@@ -6,6 +6,7 @@
     "start": "nx run-many --parallel --target=serve --projects=frontend,backend",
     "start:frontend": "nx serve frontend",
     "test:unit": "nx test frontend",
+    "test:unit:watch": "nx test frontend --watch",
     "test:e2e": "nx e2e frontend-e2e",
     "start:backend": "nx serve backend",
     "lint:fix": "nx run-many --all --target=lint --fix --parallel",
