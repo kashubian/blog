@@ -20,6 +20,23 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "estimatedReadingTime": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "label": {
+      "type": "string",
+      "required": true
     }
   }
 }
