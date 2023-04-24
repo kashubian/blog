@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: $primary-color;
+  margin: 18px 0 32px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 32px;
+  }
+}
+
+.description {
+}

@@ -23,20 +23,24 @@ function PostsList() {
                   >
                     {format(new Date(attributes.publishedAt), 'PP')}
                   </time>
-                  <h2 className={styles.heading}>{attributes.title}</h2>
-                  <p className={styles.description}>
-                    {attributes.description.substring(0, 300)}
-                    {attributes.description.length >= 300 && '...'}
-                  </p>
+                  <Link to={`post/${id}`} className={styles.link}>
+                    <h2 className={styles.heading}>{attributes.title}</h2>
+                    <p className={styles.description}>
+                      {attributes.description.substring(0, 300)}
+                      {attributes.description.length >= 300 && '...'}
+                    </p>
+                  </Link>
                 </div>
                 <div className="col-4">
-                  <div className={styles.photo}>
-                    <img
-                      className={styles.photo__wrapper}
-                      src={API_URL + attributes.photo.data.attributes.url}
-                      alt=""
-                    />
-                  </div>
+                  <Link to={`post/${id}`} className={styles.link}>
+                    <div className={styles.photo}>
+                      <img
+                        className={styles.photo__wrapper}
+                        src={API_URL + attributes.photo.data.attributes.url}
+                        alt=""
+                      />
+                    </div>
+                  </Link>
                 </div>
                 <div className="row">
                   <div className="col">
