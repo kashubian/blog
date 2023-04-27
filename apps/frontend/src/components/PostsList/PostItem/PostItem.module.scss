@@ -48,32 +48,3 @@
     height: 140px;
   }
 }
-
-.articleInfo {
-  display: flex;
-  align-items: center;
-
-  @media screen and (min-width: $tablet) {
-    padding: 24px 0;
-  }
-}
-
-.label {
-  color: $neutral-color;
-  background-color: $accent-color;
-  font-size: 13px;
-  margin-right: 6px;
-  border: none;
-  border-radius: 24px;
-  padding: 2px 8px;
-  text-decoration: none;
-
-  &:hover {
-    color: $neutral-color;
-  }
-}
-
-.readingTime {
-  color: $accent-color;
-  font-size: 13px;
-}

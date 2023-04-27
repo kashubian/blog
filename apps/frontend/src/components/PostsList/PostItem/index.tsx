@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
-
 import { API_URL } from '../../../constants';
 import Post from '../../../types/post';
 import PostPublishDate from './PostPublishDate';
+import PostAdditionalInfo from './PostAdditionalInfo';
 
 import styles from './PostItem.module.scss';
 
@@ -27,19 +26,11 @@ function PostItem({ attributes, id }: Post) {
             />
           </div>
         </div>
-        <div className="row">
-          <div className="col">
-            <div className={styles.articleInfo}>
-              <Link to="/" className={styles.label}>
-                {attributes.label}
-              </Link>
-              <div className={styles.readingTime}>
-                {attributes.estimatedReadingTime} min read
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+      <PostAdditionalInfo
+        label={attributes.label}
+        estimatedReadingTime={attributes.estimatedReadingTime}
+      />
     </article>
   );
 }
