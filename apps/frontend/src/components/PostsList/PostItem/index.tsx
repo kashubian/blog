@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import format from 'date-fns/format';
 
 import { API_URL } from '../../../constants';
 import Post from '../../../types/post';
+import PostPublishDate from './PostPublishDate';
 
 import styles from './PostItem.module.scss';
 
@@ -11,12 +11,7 @@ function PostItem({ attributes, id }: Post) {
     <article className={styles.article}>
       <div className="row">
         <div className="col-8">
-          <time
-            className={styles.publishedAt}
-            dateTime={attributes.publishedAt}
-          >
-            {format(new Date(attributes.publishedAt), 'PP')}
-          </time>
+          <PostPublishDate publishedAt={attributes.publishedAt} />
           <h2 className={styles.heading}>{attributes.title}</h2>
           <p className={styles.description}>
             {attributes.description.substring(0, 300)}
