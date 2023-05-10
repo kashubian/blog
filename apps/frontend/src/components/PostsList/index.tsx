@@ -7,8 +7,8 @@ function PostsList() {
   return (
     <div>
       {data &&
-        data.map(({ id, attributes }) => {
-          return <PostItem id={id} attributes={attributes} key={id} />;
+        data.map((post) => {
+          return <PostItem post={post} key={post.id} />;
         })}
     </div>
   );
