@@ -1,7 +1,7 @@
 type Post = {
   id: number;
   title: string;
-  description: string;
+  lead: string;
   publishedAt: string;
   estimatedReadingTime: number;
   label: string;
