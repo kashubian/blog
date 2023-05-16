@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 
 import { usePostDetails } from '../../hooks/usePostDetails';
 import Container from '../common/Container';
@@ -16,6 +17,8 @@ function PostDetails() {
         <>
           <h2 className={styles.title}>{data.title}</h2>
           <p className={styles.lead}>{data.lead}</p>
+          <hr />
+          <ReactMarkdown children={data.body} />
         </>
       )}
     </Container>

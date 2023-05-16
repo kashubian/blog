@@ -37,6 +37,10 @@
     "label": {
       "type": "string",
       "required": true
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
     }
   }
 }
