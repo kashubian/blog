@@ -4,10 +4,7 @@ import { API_URL } from '../../constants';
 import Post from '../../types/post';
 
 export const usePosts = (queryParams: string) => {
-  let apiUrl = `${API_URL}/api/posts`;
-  if (queryParams) {
-    apiUrl += `?${queryParams}`;
-  }
+  const apiUrl = `${API_URL}/api/posts${queryParams ? `?${queryParams}` : ''}`;
 
   return useQuery<Post[]>(['posts'], () =>
     fetch(apiUrl)

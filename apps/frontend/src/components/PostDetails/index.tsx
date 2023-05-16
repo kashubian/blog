@@ -14,8 +14,8 @@ function PostDetails() {
     <Container>
       {data && (
         <>
-          <h2 className={styles.title}>{data.attributes.title}</h2>
-          <p className={styles.description}>{data.attributes.description}</p>
+          <h2 className={styles.title}>{data.title}</h2>
+          <p className={styles.description}>{data.description}</p>
         </>
       )}
     </Container>

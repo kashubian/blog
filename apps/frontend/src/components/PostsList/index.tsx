@@ -1,10 +1,5 @@
-import format from 'date-fns/format';
-import { Link } from 'react-router-dom';
-
-import { API_URL } from '../../constants';
 import { usePosts } from '../../hooks/usePosts';
-
-import styles from './PostsList.module.scss';
+import PostItem from './PostItem';
 
 function PostsList() {
   const { data } = usePosts('sort=publishedAt:DESC&populate=photo');
@@ -12,51 +7,8 @@ function PostsList() {
   return (
     <div>
       {data &&
-        data.map(({ id, attributes }) => {
-          return (
-            <article className={styles.article} key={id}>
-              <div className="row">
-                <div className="col-8">
-                  <time
-                    className={styles.publishedAt}
-                    dateTime={attributes.publishedAt}
-                  >
-                    {format(new Date(attributes.publishedAt), 'PP')}
-                  </time>
-                  <Link to={`post/${id}`} className={styles.link}>
-                    <h2 className={styles.heading}>{attributes.title}</h2>
-                    <p className={styles.description}>
-                      {attributes.description.substring(0, 300)}
-                      {attributes.description.length >= 300 && '...'}
-                    </p>
-                  </Link>
-                </div>
-                <div className="col-4">
-                  <Link to={`post/${id}`} className={styles.link}>
-                    <div className={styles.photo}>
-                      <img
-                        className={styles.photo__wrapper}
-                        src={API_URL + attributes.photo.data.attributes.url}
-                        alt=""
-                      />
-                    </div>
-                  </Link>
-                </div>
-                <div className="row">
-                  <div className="col">
-                    <div className={styles.articleInfo}>
-                      <Link to="/" className={styles.label}>
-                        {attributes.label}
-                      </Link>
-                      <div className={styles.readingTime}>
-                        {attributes.estimatedReadingTime} min read
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-          );
+        data.map((post) => {
+          return <PostItem post={post} key={post.id} />;
         })}
     </div>
   );

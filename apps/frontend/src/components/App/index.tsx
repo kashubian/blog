@@ -7,8 +7,8 @@ import PostDetails from '../PostDetails';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: Infinity,
-      cacheTime: Infinity,
+      staleTime: 30 * (60 * 1000), // 30 mins
+      cacheTime: 60 * (60 * 1000), // 60 mins
     },
   },
 });
