@@ -1,8 +1,9 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
 import { usePostDetails } from '../../hooks/usePostDetails';
 import Container from '../common/Container';
+import Button from '../common/Button';
 
 import styles from './PostDetails.module.scss';
 
@@ -15,6 +16,9 @@ function PostDetails() {
     <Container>
       {data && (
         <>
+          <Link to={'/'}>
+            <Button className={styles.link}>Back</Button>
+          </Link>
           <h2 className={styles.title}>{data.title}</h2>
           <p className={styles.lead}>{data.lead}</p>
           <hr />

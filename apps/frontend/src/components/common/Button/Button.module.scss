@@ -1,0 +1,14 @@
+@import '../../../variables.scss';
+
+.button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: $neutral-color;
+  background-color: $accent-color;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: darken($accent-color, 30%);
+  }
+}
