@@ -1,5 +1,9 @@
 @import '../../variables.scss';
 
+.link {
+  margin-top: 24px;
+}
+
 .title {
   font-size: 24px;
   font-weight: 700;
@@ -11,5 +15,6 @@
   }
 }
 
-.description {
+.lead {
+  margin-bottom: 32px;
 }
