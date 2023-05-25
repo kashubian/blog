@@ -10,6 +10,15 @@
   }
 }
 
+.link {
+  text-decoration: none;
+  color: $primary-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
 .heading {
   font-weight: 700;
   font-size: 16px;
